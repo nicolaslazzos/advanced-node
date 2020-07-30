@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const util = require('util');
 const redis = require('redis');
+const keys = require('../config/keys');
 
-const redisUrl = 'redis://127.0.0.1:6379';
-const client = redis.createClient(redisUrl);
+const client = redis.createClient(keys.redisUrl);
 
 // promisify takes a function that takes a callback as the last argument and returns a function that returns a promise
 client.hget = util.promisify(client.hget);
