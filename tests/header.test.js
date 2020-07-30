@@ -23,7 +23,7 @@ test('clicking login starts oauth flow', async () => {
   expect(url).toContain('accounts.google.com');
 });
 
-test.only('you can login into the page', async () => {
+test('you can login into the page', async () => {
   await page.login();
   const text = await page.getContentOf('a[href="/auth/logout"]');
   expect(text).toEqual('Logout');
