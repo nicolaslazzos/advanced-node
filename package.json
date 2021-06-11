@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "jest": {
-    "setupTestFrameworkScriptFile": "./tests/setup.js",
+    "setupFilesAfterEnv": [
+      "./tests/setup.js"
+    ],
     "verbose": true,
     "testURL": "http://localhost:3000"
   },
@@ -25,10 +27,9 @@
     "concurrently": "^3.5.0",
     "cookie-session": "^2.0.0-beta.2",
     "express": "^4.15.3",
-    "jest": "^22.1.4",
-    "migrate-mongoose": "^3.2.2",
-    "mongoose": "^5.7.5",
-    "nodemon": "^1.11.0",
+    "jest": "^27.0.4",
+    "mongoose": "5.12.13",
+    "nodemon": "^2.0.7",
     "passport": "^0.3.2",
     "passport-google-oauth": "^2.0.0",
     "path-parser": "^2.0.2",
