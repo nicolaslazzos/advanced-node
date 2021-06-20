@@ -17,6 +17,12 @@ npm i
 cd ..
 ```
 
+Start the redis server
+
+```
+sudo service redis-server start
+```
+
 Run the project in development mode
 
 ```
